@@ -20,8 +20,9 @@ class _OrderScreenState extends State<OrderScreen> {
   Order order;
   bool showToken = false;
   @override
-  // ignore: must_call_super
+
   void initState() {
+    super.initState();
     order = API().order;
   }
 
