@@ -4,6 +4,7 @@ import 'package:scalapay_integration/api/api.dart';
 import 'package:scalapay_integration/custom_widgets/button_widget.dart';
 import 'package:scalapay_integration/models/order.dart';
 import 'package:scalapay_integration/models/order_response.dart';
+import 'package:url_launcher/url_launcher.dart';
 
 import '../main.dart';
 import 'display_details.dart';
@@ -161,10 +162,26 @@ class _OrderScreenState extends State<OrderScreen> {
                             padding: const EdgeInsets.all(32),
                             child: Column(children: [
                               showToken
-                                  ? Text(
-                                      'Your token code is \'${snapshot.data.token}\'',
-                                      style: TextStyle(color: Colors.white),
-                                    )
+                                  ? Column(
+                                    children: [
+                                      Text(
+                                          'Your token code is \'${snapshot.data.token}\'',
+                                          style: TextStyle(color: Colors.white),
+                                        ),
+                                      GestureDetector(
+                                        onTap: () async {
+                                          launch(snapshot.data.checkoutUrl);
+                                        },
+                                        child: Text(
+                                          snapshot.data.checkoutUrl,
+                                          style: TextStyle(
+                                              fontSize: 16,
+                                              color: Colors.white,
+                                              decoration: TextDecoration.underline),
+                                        ),
+                                      ),
+                                    ],
+                                  )
                                   : Container()
                             ]),
                           );
