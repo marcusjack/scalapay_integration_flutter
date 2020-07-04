@@ -4,7 +4,7 @@
 This project shows the usuage of 
 
     1.   GET v2/configurations
-         https://staging.api.scalapay.com/v2/orders
+         https://staging.api.scalapay.com/v2/configurations
 
     2.  POST v2/orders
         https://staging.api.scalapay.com/v2/orders
@@ -15,10 +15,11 @@ There are basically two screens in the app. The first screen displays the config
 So, after placing order using step 2, user can then see his order details in second page. I have provided a button to see the token and checkout url returned by the api. We can click on the url to navigate into it.
 
 Please watch the video below.
+
 ![](20200704_171254.gif)
 
 
 You can download app from 
 https://github.com/rmsh03dhj/scalapay_integration_flutter/blob/master/app.apk
 
-or else clone the project, run **flutter pub get** and build app to run either on emulator or device.
+or else clone the project, run **flutter pub get** and build app to run either on emulator or device. 
