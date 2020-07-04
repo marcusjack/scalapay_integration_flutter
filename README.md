@@ -1,16 +1,24 @@
-# scalapay_integration
+# Integration of Scalapay api in flutter
 
-A new Flutter application.
+## General description about the content
+This project shows the usuage of 
 
-## Getting Started
+    1.   GET v2/configurations
+         https://staging.api.scalapay.com/v2/orders
 
-This project is a starting point for a Flutter application.
+    2.  POST v2/orders
+        https://staging.api.scalapay.com/v2/orders
 
-A few resources to get you started if this is your first Flutter project:
 
-- [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
+There are basically two screens in the app. The first screen displays the configuration obtained from 1. Then, it will ask user to place order. Here, the orders are in the form of hardcoded json value. So, user won't be able to place order by selecting items himself (Need to be implemented). 
 
-For help getting started with Flutter, view our
-[online documentation](https://flutter.dev/docs), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+So, after placing order using step 2, user can then see his order details in second page. I have provided a button to see the token and checkout url returned by the api. We can click on the url to navigate into it.
+
+Please watch the video below.
+![](20200704_171254.gif)
+
+
+You can download app from 
+https://github.com/rmsh03dhj/scalapay_integration_flutter/blob/master/app.apk
+
+or else clone the project, run **flutter pub get** and build app to run either on emulator or device.
